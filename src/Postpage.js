@@ -1,0 +1,15 @@
+import React from "react";
+import Posts from "./posts";
+import { useParams } from "react-router-dom";
+
+function Postpage() {
+  let { id } = useParams();
+  return (
+    <div>
+      <h1>{Posts.posts[id - 1].title}</h1>
+      <p>{Posts.posts[id - 1].content}</p>
+    </div>
+  );
+}
+
+export default Postpage;
