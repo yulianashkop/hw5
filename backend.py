@@ -2,8 +2,6 @@ from flask import Flask
 from datetime import datetime
 import mysql.connector as mysql
 import json
-import bcrypt
-import uuid
 
 db = mysql.connect(
     host="localhost",
