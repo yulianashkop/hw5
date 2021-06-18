@@ -49,7 +49,7 @@ def get_all_posts():
     for r in records:
         data.append(dict(zip(header, r)))
 
-    return json.dumps(data, default=str)
+    return json.dumps(data)
 
 
 if __name__ == "__main__":
