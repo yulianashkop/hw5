@@ -8,7 +8,7 @@ db = mysql.connect(
     user="root",
     passwd="yuliedri221293",
     database="blog")
-print(db)
+
 
 app = Flask(__name__)
 
@@ -23,7 +23,6 @@ def manage_posts():
 
 def add_post():
     data = request.get_json()
-    print(data)
     query = "insert into post (id, author_name, title, publish_time) values (%s ,%s, %s, %s)"
     publish_time = datetime.now()
     author = "yuliedri@mail.com"
